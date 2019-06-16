@@ -120,11 +120,55 @@
 //
 //
 
-import React, { Component } from 'react';
-import ReactDom from 'react-dom';
-import CommentBox from './commentBox';
+//import React, { Component } from 'react';
+//import ReactDom from 'react-dom';
+//import CommentBox from './commentBox';
+//
+//const data = {
+//	post: {
+//		user: 'Bill',
+//		id: 1,
+//		content: '니체는 말했지. 재능에 대해서 말하지 말라고, 재능없이 성공한 이를 몇이든 댈수있다고.'
+//	},
+//	comments: [
+//		{ user: 'hi',
+//		  id: 1,
+//		  content: 'aswesome!!'
+//		},
+//		{ user: 'OO',
+//		  id: 2,
+//		  content: 'from the books name "Grit".'
+//		},
+//		{ user: 'Wow',
+//		  id: 3,
+//		  content: 'Wow Good.'
+//		},
+//	]
+//};
+//
+//const node = document.getElementById( 'root' );
+//
+//ReactDom.render( React.createElement( CommentBox, {
+//	post: data.post,
+//	comments: data.comments
+//}), node ) 
+//
+//
 
-const data = {
+//import React from 'react';
+//import ReactDom from 'react-dom';
+//import ShallowCopy from './setState';
+//
+//const node = document.getElementById( 'root' );
+//
+//ReactDom.render( <ShallowCopy/>, node );
+//
+
+import React from 'react';
+import ReactDom from 'react-dom';
+import InputBox from './props.js';
+
+let data = {
 	post: {
 		user: 'Bill',
 		id: 1,
@@ -147,8 +191,10 @@ const data = {
 };
 
 const node = document.getElementById( 'root' );
+ReactDom.render( <InputBox
+	post = {data.post}
+	comments = {data.comments}
+/>, node )
 
-ReactDom.render( React.createElement( CommentBox, {
-	post: data.post,
-	comments: data.comments
-}), node ) 
+
+
